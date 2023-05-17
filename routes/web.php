@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,11 +66,15 @@ Route::get('/', function () {
 //     });
 // });
 
-Route::name('location.')->group(function() {
-    Route::get('city', function () {
-        echo "HA NOI";
-    })->name('maincity');
+// Route::name('location.')->group(function() {
+//     Route::get('city', function () {
+//         echo "HA NOI";
+//     })->name('maincity');
+// });
+Route::get('/', function() {
+    return view('welcome');
 });
+Route::get('student/add',[StudentController::class,'add']);
 
 
 
