@@ -1,13 +1,8 @@
-<h1>ABOUT PAGE</h1>
-<ul>
-    {{-- ROUTE --}}
-    {{-- <li><a href="{{ route('front_home')}}">HOME</a></li>
-    <li><a href="{{ route('front_about')}}">ABOUT</a></li>
-    <li><a href="{{ url('/')}}">HOME url</a></li>
-    <li><a href="{{ URL::to('/about')}}">ABOUT url</a></li> --}}
-    {{-- CONTROLLER --}}
-    <li><a href="{{ route('student.home')}}">HOME</a></li>
-    <li><a href="{{ route('student.about')}}">ABOUT</a></li>
-</ul>
-<p>About page description</p>
-
+@extends('layout')
+@section('title','About Page')
+@section('heading','ABOUT PAGE')
+@section('main_content')
+    <p>
+        Welcome to ISSUE #178 of The Overflow! This newsletter is by developers, for developers, written and curated by the Stack Overflow team and Cassidy Williams. This week: getting your tech team to make big changes, dark e-commerce patterns, and the page that fetches itself.
+    </p>
+@endsection

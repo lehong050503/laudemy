@@ -41,7 +41,38 @@ use Illuminate\Support\Facades\Route;
 // ============================
 // BLADE
 
-Route::get('/',[StudentController::class,'index'])->name('student.index');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Route::group(['prefix'=>'location'], function(){
+//     Route::get('city', function () {
+//         echo "HA NOI";
+//     });
+//     Route::get('country', function () {
+//         echo "BAC TU LIEM";
+//     });
+//     Route::get('zip', function () {
+//         echo "123456789";
+//     });
+// });
+// Route::middleware(['price'])->group(function(){
+//     Route::get('item1', function () {
+//         echo "Item 1 Price";
+//     });
+//     Route::get('item2', function () {
+//         echo "Item 2 Price";
+//     });
+// });
+
+Route::name('location.')->group(function() {
+    Route::get('city', function () {
+        echo "HA NOI";
+    })->name('maincity');
+});
+
+
+
 
 
 

@@ -1,4 +1,6 @@
-<h1>TEST</h1>
+<h1>TEST WELCOME</h1>
+<p>Some text here</p>
+<a href="{{ route('location.maincity') }}">Goto city</a>
 
 
 {{-- @foreach($student_name as $value)
